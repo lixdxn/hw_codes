@@ -9,10 +9,10 @@ import numpy as np
 
 
 #2 Given a list of integers, use map() to double each number in the list
-#def test(x):
+# def test(x):
 #    return x*2
-#x, y=int(input()), int(input())
-#print(list(map(test, range(x, y))))
+# x, y=int(input()), int(input())
+# print(list(map(test, range(x, y))))
 
 
 
@@ -21,4 +21,88 @@ import numpy as np
 # even_num=list(filter(lambda x: x%2==0, range(y, z)))
 # print(even_num)
 
+
+
+#4 Use reduce() to find the product of all numbers in a given list
+# numbers=[1, 2, 3, 4, 5]
+# product_of_numbs=reduce(lambda x,y: x*y, numbers)
+# print(product_of_numbs)
+
+
+
+#5 Use this function with filter() to extract prime numbers from a list
+# def is_prime(number):
+#     if number <=1:
+#         return False
+#     for i in range(2, int(number**0.5)+1):
+#         if number%i==0:
+#             return False
+#     return True
+               
+# numbers=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(list(filter(is_prime, numbers)))    
+
+
+
+#6 Given a list of numbers, first filter out the even numbers and then square them using map()
+# numbers=[1,2,3,4,5,6,7,8,9]
+# test=list (map(lambda x: x**2, filter(lambda x: x%2==0, numbers)))
+# print(test)
+
+
+
+#7 Write a python function to create a simple Calculator
+# def simple_calculator(first_num, x, second_num):
+#     if x == '+':
+#         return first_num + second_num
+#     elif x=='-':
+#         return first_num - second_num
+#     elif x=='*':
+#         return first_num * second_num
+#     elif x=='/':
+#         return first_num / second_num
+
+# first_num, x, second_num=input('enter the values: ').split()        
+# print('result:', simple_calculator(int(first_num), x, int(second_num)))
+
+
+
+#8 Write a python function to find max of two numbers
+# def find_max(first_num, second_num):
+#     if first_num < second_num:
+#         return second_num
+#     elif first_num > second_num :
+#         return first_num
+#     # elif first_num == second_num:
+#     #     print ('no solution')
+# first_num, second_num = input('enter the values: ').split()
+# print('result:', find_max(int(first_num), int(second_num)))        
+
+
+
+#9 Write a python function to sum all numbers from given list
+# def sum_num(x,y):
+#     return x+y
+# numbers=list(map(int, input().split()))
+# result=reduce(sum_num, numbers)
+# print(result)
+
+
+
+#10 Write a python function to multiply all numbers from given list
+# def sum_num(x,y):
+#     return x*y
+# numbers=list(map(int, input().split()))
+# result=reduce(sum_num, numbers)
+# print(result)
+
+
+
+#11 You are given a program that takes all 3 passengers ages as inputs and inserts them in a list
+# x, y, z=list(map(int, input().split()))
+# if x<=16 or y<=16 or z<=16:
+#     print('Too young!')
+#     exit()
+# else:
+#     print('Get ready!')
 
