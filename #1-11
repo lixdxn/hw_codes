@@ -1,0 +1,50 @@
+from functools import reduce
+import numpy as np
+
+#1 Create a lambda function that multiplies any number by 10
+#add=lambda x: x*10
+#x=int(input())
+#print(add(x))
+
+
+
+#2 Given a list of integers, use map() to double each number in the list
+#def test(x):
+#    return x*2
+#x, y=int(input()), int(input())
+#print(list(map(test, range(x, y))))
+
+
+
+#3 Given a list of numbers, use filter() to extract all the even numbers
+# y, z=int(input()), int(input())
+# even_num=list(filter(lambda x: x%2==0, range(y, z)))
+# print(even_num)
+
+
+
+#4 Use reduce() to find the product of all numbers in a given list
+# numbers=[1, 2, 3, 4, 5]
+# product_of_numbs=reduce(lambda x,y: x*y, numbers)
+# print(product_of_numbs)
+
+
+
+#5 Use this function with filter() to extract prime numbers from a list
+# def is_prime(number):
+#     if number <=1:
+#         return False
+#     for i in range(2, int(number**0.5)+1):
+#         if number%i==0:
+#             return False
+#     return True
+               
+# numbers=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(list(filter(is_prime, numbers)))    
+
+
+
+#6 Given a list of numbers, first filter out the even numbers and then square them using map()
+# numbers=[1,2,3,4,5,6,7,8,9]
+# test=list (map(lambda x: x**2, filter(lambda x: x%2==0, numbers)))
+# print(test)
