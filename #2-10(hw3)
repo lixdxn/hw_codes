@@ -1,0 +1,131 @@
+#2 Given an list of numbers. Find the maximum element in list. Without use max function.
+# def func(list_nums):
+#     max_num=list_nums[0]
+#     for num in list_nums:
+#         if num>max_num:
+#             max_num=num
+#     return max_num
+       
+# print(func([1,3,7,2,5,10,6]))
+
+
+
+#3 Write a Python program that validates passwords based on the following criteria
+# import re
+# def func(password):
+#     while len(password)>=8:
+#         if not re.search('[a-z]', password):
+#             break
+#         elif not re.search('[A-Z]',password):
+#             break
+#         elif not re.search('[0-9]', password):
+#             break
+#         elif not re.search('[!@#$%^&*<>,.]', password):
+#             break
+#         else:
+#             return True
+# print(func(password=input()))
+
+
+
+#5 Create the list which elements are products between two neighbours.
+# list1 = list(map(int, input().split()))
+# result = []
+# for i in range(len(list1)-1):
+#     result.append(list1[i]*list1[i+1])
+# print(result)
+
+
+
+#6 Replace all ‘_’ in a sentence with the words from the array.
+# def ashot(a:str):
+#     a = a.split(' ')
+#     list2=['Ashot','problem']
+    
+#     if '_' in a:
+#         for i in range(len(a)):
+#             if a[i]=='_':
+#                 a[i] = list2[0]
+#                 del list2[0]
+#     return " ".join(a)
+
+# print(ashot('_ we have a _ .'))
+
+
+
+#7 Find the strings with maximum and minimum lengths in array. Print the sum of their lengths.
+# list1 = list(map(str, input().split()))
+# def func(list1):
+#     max_elem=list1[0]
+#     for elem in list1:
+#         if len(elem)>len(max_elem):
+#             max_elem=elem 
+
+#     min_elem=list1[0]
+#     for elem in list1:
+#         if len(elem)<len(min_elem):
+#             min_elem=elem
+#     return len(max_elem)+len(min_elem)    
+      
+# print(func(list1))
+
+
+
+#8 Find the index of a first element which is equal to that number.
+# def func(nums, elem):
+#     index=0
+#     next_index=0
+#     for list_elem in nums:
+#         if list_elem==elem:
+#             return index
+#         else:
+#             difference=abs(list_elem-elem)
+#             min_diff=abs(nums[0]-elem)
+#             if difference<min_diff:
+#                 min_diff=difference   
+#                 next_index=index
+#         index+=1    
+       
+#     return next_index
+# elem=int(input())
+# print(func([21,-9,2116,-71,33], elem))            
+
+
+
+#9 Given an dict. Invert it (keys become values and values become keys). 
+# dict_1={'a': 1, 'b': 2, 'c': 2 }
+# def function(a):
+#     o = {}
+#     for key, value in a.items():
+#         if value not in o:
+#             o[value] = key
+#         elif value in o:
+#             o[value]=[o[value]]
+#             o[value].append(key)
+        
+#     return o
+# print(function(dict_1))
+
+
+
+#10 Define a function which can generate a dictionary where the keys are numbers between 1 and N (both included) 
+# and the values are square of keys. 
+# def func(n):
+#     dict1={}
+#     for value in range(1, n+1):
+#             dict1[value]=value**2
+#     return dict1
+# print(func(5))
+
+
+
+#4 Write a program that takes in a string as input, counts and outputs the number of vowels.
+# def func(str1):
+#     count=0
+#     vowels=['a','e','i','o','u']
+#     for i in str1:
+#         if i.lower() in vowels:
+#             count+=1
+#     return count
+
+# print(func('test'))
