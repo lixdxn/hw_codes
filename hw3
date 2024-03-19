@@ -1,0 +1,54 @@
+#в соответствии с оценками //возрастание
+# def func(students):
+#     x = {}
+#     while students:  
+#         min_key=min(students, key=students.get) 
+#         x[min_key]=students.pop(min_key)
+       
+#     return x
+
+# students = {'Ani': 10, 'Nare': 8, 'Gago': 7, 'Jhon': 10, 'Sam': 2}
+# print(func(students))
+
+
+#Create an list of evenly spaced elements starting from a to b spaced by step.
+# def func(a,b,step):
+#     i=[]
+#     for i in range(a,b,step):
+#         while a<=b:
+#             i.append(a)
+#             a+=step
+#         return i
+
+# print(func(10,100,20))
+
+# Imagine you and the computer are playing tennis
+# def func(results):
+#     player=0
+#     computer=0
+#     player_win=0
+#     computer_win=0
+#     for i in results:
+#         if i=='b':
+#             computer+=1
+#         elif i=='a':
+#             player+=1
+#         if computer>=6:
+#             computer_win+=1
+#             computer, player=0,0
+#         elif player>=6:
+#             player_win+=1
+#             computer, player=0,0
+#     return computer_win, player_win
+
+# results=['b','a','a','a','a','a','a','a','a','a',
+# 'a','a','b','b','b','b','b','b','a','a','a','a', 
+# 'a','b','b','b','b','b', 'a','a','a','a','a','a',
+# 'a','a','a','a','a','a','a','a','a']
+# computer_win, player_win=func(results)
+# if player_win>computer_win:
+#     print('you won!')
+# elif player_win<computer_win:
+#     print('you lose!')
+# else:
+#     print(' ')
