@@ -1,0 +1,29 @@
+# Write a recursive function to determine whether all digits of the number are odd or not.
+# def odd(x):
+#     if int(x[0])%2==0:
+#         return False
+#     else:
+#         return True
+#     return odd(x[1:])
+# x=input()
+# print(odd(x))
+
+# Given N number. Write a recursive function that should print from 1 to N numbers
+# def nums(num):
+#     if num>=1:
+#         nums(num-1)
+#         print(num)
+# nums(5)
+
+# Write a python program to find the longest word from the file content
+# def find_long_word(file_name):
+#     try:
+#         with open(file_name, 'r') as file:
+#             text=file.read()
+#             works=text.split()
+#             LongestWork=max(works, key=len)
+#             return LongestWork
+#     except:
+#         return None
+# LongestWork=find_long_word('/Users/.../song.txt')
+# print(LongestWork)
