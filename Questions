@@ -35,11 +35,10 @@ class QA:
                     print('Next question:')
             if total>=correct_answer:
                 current_stage+=1
-                # self.current_questions=set_questions+incorrect_answer
                 total=0
             else:
                 print("You didn't make it to the next stage")
-        print('result: ', current_stage*5+total)
+        # print('result: ', current_stage*5+total)
 questions={
     '5 + 5': ['8', '10+', '5', '7'],
     '6 + 54': ['60+', '76', '58', '70'],
