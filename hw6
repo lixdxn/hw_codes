@@ -1,0 +1,81 @@
+#1 Write a python class to find max, min num and and sum in your list
+# class MaxMin:
+#     def __init__(self, list1):
+#         self.list1=list1
+#     def maximum(self):
+#         max_elem=self.list1[0]
+#         for elem in self.list1:
+#             if elem>max_elem:
+#                 max_elem=elem
+#         return max_elem
+#     def minimum(self):
+#         min_elem=self.list1[0]
+#         for elem in self.list1:
+#             if elem<min_elem:
+#                 min_elem=elem
+#         return min_elem
+#     def summa(self):
+#         total=0
+#         for elem in self.list1:
+#             total +=elem
+#         return total
+
+# list1=[3,4,5,3,1,6,3]
+# x=MaxMin(list1)
+# print(x.maximum(),x.minimum(),x.summa())
+
+
+#2 Write a python class to find two highest values in your dict
+# class HighestValues:
+#     def __init__(self, my_dict):
+#         self.my_dict=my_dict
+#     def highest_elem(self):
+#         sorted_dict=sorted(self.my_dict.values())
+#         return sorted_dict[-1], sorted_dict[-2]
+# my_dict={'a': 15, 'b': 50, 'c': 30, 'd': 25, 'e': 75}
+# x=HighestValues(my_dict)
+# print(x.highest_elem())
+
+
+#4 Write a Python class named Rectangle constructed by a length and width 
+# and a method which will compute the area of a rectangle
+# class Rectangle:
+#     def __init__(self, length, width):
+#         self.length=length
+#         self.width=width
+#     def area(self):
+#         return self.length*self.width
+# length=int(input())
+# width=int(input())
+# x=Rectangle(length, width)
+# print(x.area())
+
+#5 Write a python class where we use polymorphism
+# class Armenia:
+#     def city(self):
+#         print('Yerevan')
+# class France:
+#     def city(self):
+#         print('Paris')
+# a=Armenia()
+# b=France()
+# a.city()
+# b.city()
+
+
+# 6 Create a class Change:You have 3
+# methods in your class:
+# Usd --- Eur
+# Usd --- Amd
+# Usd --- Ru
+# class Change:
+#     def __init__(self, usd):
+#         self.usd=usd
+#     def exchange(self):
+#         usd_eur = self.usd * 0.92
+#         usd_amd = self.usd * 395.92
+#         usd_ru = self.usd * 92.49
+#         return usd_eur, usd_amd, usd_ru
+# usd=100
+# x=Change(usd)
+# print(x.exchange())
