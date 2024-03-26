@@ -17,7 +17,6 @@ class QA:
             total =0
             set_questions=list(self.questions.keys())[current_stage*5: (current_stage+1)*5]
             random.shuffle(set_questions)
-            incorrect_answer=[]
             for question in set_questions:
                 print(question)
                 options=self.questions[question]
@@ -35,10 +34,9 @@ class QA:
                     print('Next question:')
             if total>=correct_answer:
                 current_stage+=1
-                total=0
+               
             else:
                 print("You didn't make it to the next stage")
-        # print('result: ', current_stage*5+total)
 questions={
     '5 + 5': ['8', '10+', '5', '7'],
     '6 + 54': ['60+', '76', '58', '70'],
