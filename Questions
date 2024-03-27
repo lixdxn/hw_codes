@@ -1,20 +1,13 @@
-'''имеем dictionary, где держим вопрос и у каждого вопроса 
-4 варианта ответов. Всего 30 вопросов, по 5 вопросов в каждом 
-этапе. Если пользователь отвечает на 3 из 5 вопросов правильно, 
-то переходит на следующие 5 вопросов(они состоят из рандомных 
-вопросов из списка и, обязательно, из тех вопросов, на которые 
-пользователь ответил неверно в предыдущем этапе)'''
-
 import random
 
 class QA:
     def __init__(self, questions):
         self.questions=questions
     def test_verification(self):
-        current_stage=0   
+        current_stage=0
         correct_answer=3
+        total=0
         while current_stage*5<len(self.questions):
-            total =0
             set_questions=list(self.questions.keys())[current_stage*5: (current_stage+1)*5]
             random.shuffle(set_questions)
             for question in set_questions:
@@ -22,10 +15,10 @@ class QA:
                 options=self.questions[question]
                 for num in range(len(options)):
                     option=options[num][:-1] if options[num].endswith('+') else options[num]
-                    print(f'{num + 1}. {option}')
+                    print(f'{num+1}. {option}')
                 answer=input('Answer: ')
 
-                if answer.isdigit() and 1<=int(answer)<=4:
+                if 1<=int(answer)<=4:
                     if options[int(answer)-1].endswith('+'):
                         total+=1
                         print('correct answer!', '\n')
@@ -34,9 +27,8 @@ class QA:
                     print('Next question:')
             if total>=correct_answer:
                 current_stage+=1
-               
             else:
-                print("You didn't make it to the next stage")
+                print('you did not make it to the next stage')
 questions={
     '5 + 5': ['8', '10+', '5', '7'],
     '6 + 54': ['60+', '76', '58', '70'],
