@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "general.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>{{ object.name }}</h1>
+    {% if object.photo %}
+    <img src="{{ cigarette_detail.photo.url }}">cigarette_detail</img>
+    {% endif %}
+
+    <p>{{ object.description }}</p>
+    <p><strong>Category:</strong> {{ object.category.name }}</p>
+<p><strong>Price:</strong> ${{ object.price }}</p>
+    <a href="{% url 'cigarette_list' %}" class="btn btn-primary">Back to list</a>
+</div>
+{% endblock %}
+</body>
+</html>

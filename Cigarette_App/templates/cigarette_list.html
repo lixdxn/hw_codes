@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "general.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+    <h1>Cigarette List</h1>
+    <div class="list-group">
+        {% for cigarette in object_list %}
+            <a href="{% url 'cigarette_detail' cigarette.pk %}" class="list-group-item list-group-item-action">
+                {{ cigarette.model }} - ${{ cigarette.price }}
+            </a>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>
